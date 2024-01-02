@@ -1,30 +1,26 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/app/app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_learn/app/main.dart';
-
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets("Calculator Test", (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.byKey(const Key("Result")), findsOneWidget);
+    expect(find.byKey(const Key("DisplayOne")), findsOneWidget);
+    expect(find.byKey(const Key("DisplayTwo")), findsOneWidget);
+    expect(find.byIcon(Icons.add), findsOneWidget);
+    expect(find.byIcon(CupertinoIcons.minus), findsOneWidget);
+    expect(find.byIcon(Icons.close), findsOneWidget);
+    expect(find.byIcon(CupertinoIcons.divide), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
+    await tester.enterText(find.byKey(const Key("DisplayOne")), "20");
+    await tester.enterText(find.byKey(const Key("DisplayTwo")), "30");
     await tester.tap(find.byIcon(Icons.add));
+
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text("50"), findsOneWidget);
   });
 }
