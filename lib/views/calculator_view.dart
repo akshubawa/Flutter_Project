@@ -24,27 +24,27 @@ class _CalculatorViewState extends State<CalculatorView> {
     displayOneController.text = x.toString();
     displayTwoController.text = y.toString();
 
-    _listener = AppLifecycleListener(
-      onShow: _onShow,
-      onHide: _onHide,
-      onResume: _onResume,
-      onDetach: _onDetach,
-      onPause: _onPause,
-      onInactive: _onInactive,
-      onRestart: _onRestart,
-      onStateChange: _onStateChange,
-    );
+    // _listener = AppLifecycleListener(
+    //   onShow: _onShow,
+    //   onHide: _onHide,
+    //   onResume: _onResume,
+    //   onDetach: _onDetach,
+    //   onPause: _onPause,
+    //   onInactive: _onInactive,
+    //   onRestart: _onRestart,
+    //   onStateChange: _onStateChange,
+    // );
   }
 
-  void _onShow() => print("onShow called");
-  void _onHide() => print("onHide called");
-  void _onResume() => print("onResume called");
-  void _onDetach() => print("onDetach called");
-  void _onPause() => print("onPause called");
-  void _onInactive() => print("onInactive called");
-  void _onRestart() => print("onRestart called");
-  void _onStateChange(AppLifecycleState state) =>
-      print("onStateChange called with state: $state");
+  // void _onShow() => print("onShow called");
+  // void _onHide() => print("onHide called");
+  // void _onResume() => print("onResume called");
+  // void _onDetach() => print("onDetach called");
+  // void _onPause() => print("onPause called");
+  // void _onInactive() => print("onInactive called");
+  // void _onRestart() => print("onRestart called");
+  // void _onStateChange(AppLifecycleState state) =>
+  //     print("onStateChange called with state: $state");
 
   @override
   void dispose() {
@@ -56,86 +56,128 @@ class _CalculatorViewState extends State<CalculatorView> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(32.0),
-      child: Column(
-        children: [
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(32, 20, 32, 0),
+        child: Column(children: [
           const Text(
             "CALCULATOR",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 70,
+              fontSize: 20,
               color: Colors.white,
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 15,
           ),
-          // Calculator Display
           DisplayBox(
               key: const Key("DisplayOne"),
-              hint: "Enter First Number",
+              label: "Enter First Number",
               controller: displayOneController),
           const SizedBox(
-            height: 30,
+            height: 15,
           ),
           DisplayBox(
               key: const Key("DisplayTwo"),
-              hint: "Enter Second Number",
+              label: "Enter Second Number",
               controller: displayTwoController),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
-          Text(
-            key: const Key("Result"),
-            z.toString(),
-            style: const TextStyle(
-              fontSize: 60,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  z = num.tryParse(displayOneController.text)! +
+                      num.tryParse(displayTwoController.text)!;
+                });
+              },
+              style: ButtonStyle(
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Color(0xFF2B2B2B)),
+                  minimumSize: const MaterialStatePropertyAll(Size(150, 50)),
+                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)))),
+              child: const Icon(
+                Icons.add,
+                size: 25,
+                color: Colors.white,
+              ),
             ),
-          ),
-          const Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              FloatingActionButton(
-                onPressed: () {
-                  setState(() {
-                    z = num.tryParse(displayOneController.text)! +
-                        num.tryParse(displayTwoController.text)!;
-                  });
-                },
-                child: const Icon(Icons.add),
+            const SizedBox(
+              width: 15,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  z = num.tryParse(displayOneController.text)! -
+                      num.tryParse(displayTwoController.text)!;
+                });
+              },
+              style: ButtonStyle(
+                  backgroundColor:
+                      const MaterialStatePropertyAll(Color(0xFF2B2B2B)),
+                  minimumSize: const MaterialStatePropertyAll(Size(150, 50)),
+                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)))),
+              child: const Icon(
+                CupertinoIcons.minus,
+                size: 25,
+                color: Colors.white,
               ),
-              FloatingActionButton(
-                onPressed: () {
-                  setState(() {
-                    z = num.tryParse(displayOneController.text)! -
-                        num.tryParse(displayTwoController.text)!;
-                  });
-                },
-                child: const Icon(CupertinoIcons.minus),
-              ),
-              FloatingActionButton(
+            ),
+          ]),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              ElevatedButton(
                 onPressed: () {
                   setState(() {
                     z = num.tryParse(displayOneController.text)! *
                         num.tryParse(displayTwoController.text)!;
                   });
                 },
-                child: const Icon(Icons.close),
+                style: ButtonStyle(
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Color(0xFF2B2B2B)),
+                    minimumSize: const MaterialStatePropertyAll(Size(150, 50)),
+                    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)))),
+                child: const Icon(
+                  Icons.close,
+                  size: 25,
+                  color: Colors.white,
+                ),
               ),
-              FloatingActionButton(
+              const SizedBox(
+                width: 20,
+              ),
+              ElevatedButton(
                 onPressed: () {
                   setState(() {
                     z = num.tryParse(displayOneController.text)! /
                         num.tryParse(displayTwoController.text)!;
                   });
                 },
-                child: const Icon(CupertinoIcons.divide),
+                style: ButtonStyle(
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Color(0xFF2B2B2B)),
+                    minimumSize: const MaterialStatePropertyAll(Size(150, 50)),
+                    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)))),
+                child: const Icon(
+                  CupertinoIcons.divide,
+                  size: 25,
+                  color: Colors.white,
+                ),
               ),
-              FloatingActionButton.extended(
+            ]),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
                   onPressed: () {
                     setState(() {
                       x = 0;
@@ -145,12 +187,33 @@ class _CalculatorViewState extends State<CalculatorView> {
                       displayTwoController.clear();
                     });
                   },
-                  label: const Text("Clear"))
+                  style: ButtonStyle(
+                    backgroundColor:
+                        const MaterialStatePropertyAll(Color(0xFF2B2B2B)),
+                    minimumSize: const MaterialStatePropertyAll(Size(320, 50)),
+                    shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
+                  ),
+                  child: const Text(
+                    "CLEAR",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  )),
             ],
-          )
-          // Expand
-          // Calculator Buttons
-        ],
+          ),
+          Text(
+            key: const Key("Result"),
+            z.toString(),
+            style: const TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ]),
       ),
     );
   }
@@ -159,11 +222,11 @@ class _CalculatorViewState extends State<CalculatorView> {
 class DisplayBox extends StatelessWidget {
   const DisplayBox({
     super.key,
-    this.hint = "Enter a number",
+    required this.label,
     required this.controller,
   });
 
-  final String? hint;
+  final String? label;
   final TextEditingController controller;
 
   @override
@@ -172,7 +235,14 @@ class DisplayBox extends StatelessWidget {
       controller: controller,
       keyboardType: TextInputType.number,
       autofocus: true,
+      style: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: 15,
+      ),
       decoration: InputDecoration(
+          filled: true,
+          fillColor: const Color(0xFF2B2B2B),
           focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
             color: Colors.black,
@@ -183,7 +253,12 @@ class DisplayBox extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10),
           ),
-          hintText: hint,
+          labelText: label,
+          labelStyle: const TextStyle(
+            fontSize: 12,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
           hintStyle: const TextStyle(
             color: Colors.white,
           )),
