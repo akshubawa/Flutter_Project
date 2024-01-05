@@ -1,0 +1,184 @@
+{
+  "icecreams": [
+    {
+      "flavor": "Caramel Swirl",
+      "description": "Sweet and buttery caramel ice cream",
+      "toppings": [
+        "Salted Caramel",
+        "Caramel Popcorn",
+        "Chocolate Sauce",
+        "Whipped Cream",
+        "Toasted Nuts"
+      ],
+      "price": 5.79,
+      "image": "https://th.bing.com/th/id/OIG.jrNRys_NeEImU20cnzms?pid=ImgGn",
+      "ingredients": [
+        {"name": "Caramel Sauce", "quantity": "1/2 cup"},
+        {"name": "Caramel Candy", "quantity": "1/4 cup"},
+        {"name": "Heavy Cream", "quantity": "1 1/4 cups"}
+      ]
+    },
+    {
+      "flavor": "Chocolate Fudge",
+      "description": "Rich and creamy chocolate ice cream with fudge swirls",
+      "toppings": [
+        "Chocolate Syrup",
+        "Chocolate Chips",
+        "Marshmallows",
+        "Cherries",
+        "Brownie Chunks"
+      ],
+      "price": 6.29,
+      "image": "https://th.bing.com/th/id/OIG.SSvCDrsvmPYyfbwxxEZB?pid=ImgGn",
+      "ingredients": [
+        {"name": "Cocoa Powder", "quantity": "1/2 cup"},
+        {"name": "Sugar", "quantity": "3/4 cup"},
+        {"name": "Heavy Cream", "quantity": "1 1/2 cups"}
+      ]
+    },
+    {
+      "flavor": "Vanilla Bean",
+      "description": "Classic vanilla ice cream made with real vanilla beans",
+      "toppings": [
+        "Whipped Cream",
+        "Vanilla Wafers",
+        "Caramel Sauce",
+        "Sprinkles",
+        "Berries"
+      ],
+      "price": 4.99,
+      "image": "https://th.bing.com/th/id/OIG.bgjRPTLPOgurp9Ij2gjP?w=1024&h=1024&rs=1&pid=ImgDetMain",
+      "ingredients": [
+        {"name": "Vanilla Beans", "quantity": "2"},
+        {"name": "Sugar", "quantity": "1 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    },
+    {
+      "flavor": "Strawberry Fields",
+      "description": "Fresh strawberry ice cream with chunks of real strawberries",
+      "toppings": [
+        "Fresh Strawberries",
+        "Strawberry Sauce",
+        "Chocolate Drizzle",
+        "Cookie Crumbs",
+        "Mint Leaves"
+      ],
+      "price": 5.49,
+      "image": "https://th.bing.com/th/id/OIG.JpWl_i_yhg_RfaDRN3jh?pid=ImgGn",
+      "ingredients": [
+        {"name": "Fresh Strawberries", "quantity": "1 1/2 cups"},
+        {"name": "Sugar", "quantity": "1/2 cup"},
+        {"name": "Heavy Cream", "quantity": "1 3/4 cups"}
+      ]
+    },
+    {
+      "flavor": "Mint Chocolate Chip",
+      "description": "Refreshing mint ice cream with chocolate chips",
+      "toppings": [
+        "Chocolate Chips",
+        "Mint Leaves",
+        "Chocolate Drizzle",
+        "Candy Cane Pieces",
+        "Brownie Bites"
+      ],
+      "price": 5.79,
+      "image": "https://th.bing.com/th/id/OIG.N2QUzRlW0tZLs9A1SHg2?pid=ImgGn",
+      "ingredients": [
+        {"name": "Fresh Mint Leaves", "quantity": "1/2 cup"},
+        {"name": "Chocolate Chips", "quantity": "1/2 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    },
+    {
+      "flavor": "Cookies and Cream",
+      "description": "Creamy vanilla ice cream with chocolate cookie crumbles",
+      "toppings": [
+        "Chocolate Cookie Crumbles",
+        "Whipped Cream",
+        "Caramel Drizzle",
+        "Marshmallows",
+        "Toasted Coconut"
+      ],
+      "price": 5.99,
+      "image": "https://th.bing.com/th/id/OIG.3HmJCVX0lCFzrbTNKf8J?pid=ImgGn",
+      "ingredients": [
+        {"name": "Chocolate Cookies", "quantity": "10"},
+        {"name": "Sugar", "quantity": "3/4 cup"},
+        {"name": "Heavy Cream", "quantity": "1 1/2 cups"}
+      ]
+    },
+    {
+      "flavor": "Pistachio Almond",
+      "description": "Smooth pistachio ice cream with crunchy almonds",
+      "toppings": [
+        "Sliced Almonds",
+        "Pistachio Pieces",
+        "Caramel Drizzle",
+        "Chocolate Chips",
+        "Toffee Bits"
+      ],
+      "price": 6.49,
+      "image": "https://th.bing.com/th/id/OIG.3pvUXFcf_eGHu.wJPtvc?pid=ImgGn",
+      "ingredients": [
+        {"name": "Pistachio Nuts", "quantity": "1/2 cup"},
+        {"name": "Almonds", "quantity": "1/4 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    },
+    {
+      "flavor": "Rocky Road",
+      "description": "Indulgent chocolate ice cream with marshmallows and nuts",
+      "toppings": [
+        "Marshmallows",
+        "Almonds",
+        "Chocolate Syrup",
+        "Caramel Drizzle",
+        "Toasted Coconut"
+      ],
+      "price": 6.79,
+      "image": "https://th.bing.com/th/id/OIG.ANL0nF6nQ1SVnbNF54JL?w=1024&h=1024&rs=1&pid=ImgDetMain",
+      "ingredients": [
+        {"name": "Mini Marshmallows", "quantity": "1 cup"},
+        {"name": "Almonds", "quantity": "1/2 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    },
+    {
+      "flavor": "Butter Pecan",
+      "description": "Creamy butter pecan ice cream with roasted pecans",
+      "toppings": [
+        "Roasted Pecans",
+        "Butter Drizzle",
+        "Caramel Sauce",
+        "Chocolate Drizzle",
+        "Cookie Crumbles"
+      ],
+      "price": 6.29,
+      "image": "https://th.bing.com/th/id/OIG.Br_mcuI1PN8XdKneyrcH?w=1024&h=1024&rs=1&pid=ImgDetMain",
+      "ingredients": [
+        {"name": "Pecans", "quantity": "1/2 cup"},
+        {"name": "Butter", "quantity": "1/4 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    },
+    {
+      "flavor": "Blueberry Cheesecake",
+      "description": "Rich blueberry ice cream with swirls of cheesecake",
+      "toppings": [
+        "Blueberry Sauce",
+        "Graham Cracker Crumbs",
+        "Whipped Cream",
+        "Chocolate Drizzle",
+        "Cinnamon Powder"
+      ],
+      "price": 6.49,
+      "image": "https://th.bing.com/th/id/OIG.ZuooHrx6Lf18LCUjlSQ5?w=1024&h=1024&rs=1&pid=ImgDetMain",
+      "ingredients": [
+        {"name": "Blueberries", "quantity": "1 1/2 cups"},
+        {"name": "Cream Cheese", "quantity": "1/2 cup"},
+        {"name": "Heavy Cream", "quantity": "2 cups"}
+      ]
+    }
+  ]
+}
